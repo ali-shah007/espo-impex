@@ -64,7 +64,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative w-full h-[80vh] overflow-hidden cursor-pointer"
+      className="relative w-full h-auto overflow-hidden cursor-pointer"
       {...swipeHandlers} // Add swipe handlers to the container
     >
       {/* Slideshow */}
@@ -73,7 +73,7 @@ const HeroSection = () => {
         style={{ transform: `translateX(-${currentImage * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="w-full lg:h-[80vh] md:h-[500px] h-[280px] flex-shrink-0 relative">
+          <div key={index} className="w-full lg:h-[70vh] md:h-[500px] h-[280px] flex-shrink-0 relative">
             <Image
               src={image}
               alt={`Espo Impex Product ${index}`}
@@ -104,7 +104,7 @@ const HeroSection = () => {
       </div> */}
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2">
         {images.map((_, index) => (
           <button
             key={index}
